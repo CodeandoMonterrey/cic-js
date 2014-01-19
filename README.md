@@ -5,14 +5,19 @@ cic-js is a client wrapper which communicates with the [CIC API](http://develope
 
 ## Quick start
 
-You have two options to install cic-js librayr and use it:
+You have three options to install cic-js librayr and use it:
 
 * Clone the repo: `git clone git@github.com:IcaliaLabs/cic-js.git`.
 * Install via bower: `bower install cic-js`.
+* Install via npm: `npm install cic-js`.
+
 
 ## Bug tracker & feature request
 
 Have a bug or a feature request? [Please open a new issue](https://github.com/IcaliaLabs/cic-js/issues). Before opening any issue, please search for existing issues.
+
+## Future
+* Add some usage examples
 
 ## Contributing
 
