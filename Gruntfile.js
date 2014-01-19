@@ -14,5 +14,5 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('travis', ['jshint', 'jasmine']);
+  grunt.registerTask('travis', ['jasmine']);
 }
