@@ -70,16 +70,16 @@ describe('Group.all', function() {
     for (index = _i = 1; _i <= 3; index = ++_i) {
       groupsArray.push(new Group(groupResponseJSON));
     }
-    groupMock = jasmine.createSpyObj(Group, ['find']);
-    groupMock.find();
-    return groupMock.find.and.callFake(function() {
+    groupMock = jasmine.createSpyObj(Group, ['all']);
+    groupMock.all();
+    return groupMock.all.and.callFake(function() {
       return groupsArray;
     });
   });
   it('tracks that the spy was called', function() {
-    return expect(groupMock.find).toHaveBeenCalled();
+    return expect(groupMock.all).toHaveBeenCalled();
   });
   return it('returns and array of three reports', function() {
-    return expect(groupMock.find()).toEqual(groupsArray);
+    return expect(groupMock.all()).toEqual(groupsArray);
   });
 });

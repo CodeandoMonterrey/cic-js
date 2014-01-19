@@ -50,14 +50,14 @@ describe 'Group.all', ->
   beforeEach ->
     for index in [1..3]
       groupsArray.push new Group groupResponseJSON
-    groupMock = jasmine.createSpyObj(Group, ['find'])
-    groupMock.find()
-    groupMock.find.and.callFake ->
+    groupMock = jasmine.createSpyObj(Group, ['all'])
+    groupMock.all()
+    groupMock.all.and.callFake ->
       groupsArray
       
 
   it 'tracks that the spy was called', ->
-    expect(groupMock.find).toHaveBeenCalled()
+    expect(groupMock.all).toHaveBeenCalled()
 
   it 'returns and array of three reports', ->
-    expect(groupMock.find()).toEqual groupsArray
+    expect(groupMock.all()).toEqual groupsArray
