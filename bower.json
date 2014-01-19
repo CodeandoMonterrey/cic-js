@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": ["src/js/active_cic.js", "src/js/report.js", "src/js/category.js", "src/js/group.js"],
   "ignore": [
-    "**/*.*"
+    "node_modules",
+    "specs"
   ],
   "dependencies": {
     "jquery": ">= 1.9.0"
