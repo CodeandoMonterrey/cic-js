@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       }
     }
     grunt.registerTask('travis', [
-      'jasmine'
+      'jshint','jasmine'
     ]);
   });
 }
