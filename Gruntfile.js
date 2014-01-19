@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     jasmine: {
       components: {
         src: [
@@ -12,8 +13,6 @@ module.exports = function(grunt) {
         }
       }
     }
-    grunt.registerTask('travis', [
-      'jshint','jasmine'
-    ]);
   });
+  grunt.registerTask('travis', ['jshint', 'jasmine']);
 }
