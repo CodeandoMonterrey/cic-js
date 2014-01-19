@@ -1,0 +1,11 @@
+{
+  "name": "cic-js",
+  "version": "1.0.0",
+  "main": [".src/js/active_cic.js", ".src/js/report.js", ".src/js/category.js", ".src/js/group.js"],
+  "ignore": [
+    "**/*.*"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  }
+}
