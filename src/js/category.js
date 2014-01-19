@@ -16,6 +16,7 @@ Category = (function(_super) {
     this.name = attributes.name;
     this.type = attributes.type;
     this.groups = new Array;
+    this.metaData = attributes.metadata;
     this._mapGroups(attributes.group);
   }
 

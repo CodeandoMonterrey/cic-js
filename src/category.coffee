@@ -6,6 +6,7 @@ class Category extends ActiveCic
     @name = attributes.name
     @type = attributes.type
     @groups = new Array
+    @metaData = attributes.metadata
 
     @_mapGroups(attributes.group)
 
