@@ -12,15 +12,15 @@ class Report extends ActiveCic
     #Report attributes
     @account = attributes.account || "nl"
     @format = "json"
-    @title = attributes.title
-    @content = attributes.content
-    @first_name = attributes.first_name
-    @last_name = attributes.last_name
-    @return_path = attributes.return_path
-    @lat = attributes.lat
-    @lng = attributes.lng
-    @video_url = attributes.video_url
-    @categories = attributes.category || attributes.categories
+    @title = attributes.title || ""
+    @content = attributes.content || ""
+    @first_name = attributes.first_name || ""
+    @last_name = attributes.last_name || ""
+    @return_path = attributes.return_path || ""
+    @lat = attributes.lat || ""
+    @lng = attributes.lng || ""
+    @video_url = attributes.video_url || ""
+    @categories = attributes.category || attributes.categories || "ACCIDENTE"
 
     @reportSerializedParams = {}
     @didSave = false
@@ -41,7 +41,7 @@ class Report extends ActiveCic
       lat: @lat
       lng: @lng
       video_url: @video_url
-      categories: @category
+      categories: @categories
     }
     
   save: (responseCallback) =>

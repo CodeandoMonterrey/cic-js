@@ -25,15 +25,15 @@ Report = (function(_super) {
     Report.__super__.constructor.call(this, "reports");
     this.account = attributes.account || "nl";
     this.format = "json";
-    this.title = attributes.title;
-    this.content = attributes.content;
-    this.first_name = attributes.first_name;
-    this.last_name = attributes.last_name;
-    this.return_path = attributes.return_path;
-    this.lat = attributes.lat;
-    this.lng = attributes.lng;
-    this.video_url = attributes.video_url;
-    this.categories = attributes.category || attributes.categories;
+    this.title = attributes.title || "";
+    this.content = attributes.content || "";
+    this.first_name = attributes.first_name || "";
+    this.last_name = attributes.last_name || "";
+    this.return_path = attributes.return_path || "";
+    this.lat = attributes.lat || "";
+    this.lng = attributes.lng || "";
+    this.video_url = attributes.video_url || "";
+    this.categories = attributes.category || attributes.categories || "ACCIDENTE";
     this.reportSerializedParams = {};
     this.didSave = false;
     this._serializedAttributes();
@@ -55,7 +55,7 @@ Report = (function(_super) {
         lat: this.lat,
         lng: this.lng,
         video_url: this.video_url,
-        categories: this.category
+        categories: this.categories
       }
     };
   };
