@@ -1,7 +1,7 @@
   {
     "name": "cic-js"
   , "description": "A wrapper for the CIC Api."
-  , "version": "1.0.0"
+  , "version": "1.1.0"
   , "keywords": ["CIC", "js", "Centro de Integracion Ciudadana"]
   , "homepage": "https://github.com/IcaliaLabs/cic-js"
   , "author": "Icalia Labs"
@@ -16,6 +16,9 @@
     }
   ]
   , "scripts": {
-    "test": "grunt travis --verbose"
+    "test": "grunt test --verbose"
+  }, "devDependencies": {
+      "grunt": "~0.4.1"
+    , "grunt-contrib-jasmine": "~0.5.1"
   }
 }
