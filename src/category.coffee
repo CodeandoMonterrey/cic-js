@@ -28,7 +28,7 @@ class Category extends ActiveCic
         categories = data.categories
         for category_attributes in categories
           response.push new Category category_attributes
-          callback(response) if callback
+        callback(response) if callback
     )
     response
 

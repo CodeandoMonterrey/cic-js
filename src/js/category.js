@@ -44,19 +44,15 @@ Category = (function(_super) {
       type: 'GET',
       async: options.async,
       success: function(data) {
-        var categories, category_attributes, _i, _len, _results;
+        var categories, category_attributes, _i, _len;
         categories = data.categories;
-        _results = [];
         for (_i = 0, _len = categories.length; _i < _len; _i++) {
           category_attributes = categories[_i];
           response.push(new Category(category_attributes));
-          if (callback) {
-            _results.push(callback(response));
-          } else {
-            _results.push(void 0);
-          }
         }
-        return _results;
+        if (callback) {
+          return callback(response);
+        }
       }
     });
     return response;
