@@ -11,6 +11,117 @@ You have three options to install cic-js librayr and use it:
 * Install via bower: `bower install cic-js`.
 * Install via npm: `npm install cic-js`.
 
+## Usage
+
+The library provides 3 class objects:
+
+### Report
+
+#### Fetch report records 
+
+To fetch the reports, you can just call the class method find()
+
+```javascript
+	Report.find()
+```
+
+You can send some options to the find method, in order to filter the request:
+
+* limit - how many reports you want
+* for_category - The category in which to filter the reports
+* until  - Filter reports previous to the date in format YYY-MMD-DD
+* async - Wheter or not you want the call to handle asyncronous
+* callback - A function to call when the request has been success
+
+Here is a quick example:
+
+```javascript
+	Report.find(
+		{
+			"limit": 1,
+			"async": false,
+			"for_category": 407,
+			"until": "2014-01-19"
+		}
+	)
+``
+
+#### Save a report
+
+It is really simple to create a report, we recommend you check the [CIC API](http://developers.cic.mx/api/) for defining the report attributes
+
+```javascript
+	report = new Report({
+		"content": "The report content",
+		"category": "ACCIDENTE"
+		...
+	});
+	report.save(function(report) { //the callback is optional
+		console.log(report.ticketId);
+	});
+```
+
+There is a shorthand in here, if you want to create a report in one line:
+
+```javascript
+	report = Report.create({
+		"content": "The report content",
+		"category": "ACCIDENTE"
+		...
+	}, function(report){ //The callback function is optional in here
+		console.log(report.ticketId);
+	});
+```
+
+### Category
+
+#### Fetch categories
+
+To fetch the reports, you can just call the class method find()
+
+```javascript
+	Category.all()
+```
+
+You can send some options to the all method:
+
+* options - Wheter or not you want the call to handle asyncronous
+* callback - A function to call when the request has been success
+
+Here is a quick example:
+
+```javascript
+	Category.all({
+		"async": false
+	}, function(categories){
+		console.log(categories.length)
+	});
+```
+
+### Group
+
+#### Fetch groups
+
+To fetch the reports, you can just call the class method find()
+
+```javascript
+	Group.all()
+```
+
+You can send some options to the all method:
+
+* options - Wheter or not you want the call to handle asyncronous
+* callback - A function to call when the request has been success
+
+Here is a quick example:
+
+```javascript
+	Group.all({
+		"async": false
+	}, function(groups){
+		console.log(groups)
+	});
+```
 
 ## Bug tracker & feature request
 
