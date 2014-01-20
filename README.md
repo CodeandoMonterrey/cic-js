@@ -44,7 +44,7 @@ Here is a quick example:
 			"until": "2014-01-19"
 		}
 	)
-``
+```
 
 #### Save a report
 
