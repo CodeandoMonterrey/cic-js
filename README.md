@@ -1,4 +1,4 @@
-#Cic JS library v1.0.0
+#Cic JS library v1.1.0
 
 cic-js is a client wrapper which communicates with the [CIC API](http://developers.cic.mx/api/), and interact with it.
 
