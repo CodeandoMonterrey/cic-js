@@ -6,6 +6,12 @@
     "node_modules",
     "specs"
   ],
+  "authors": ["Abraham Kuri", "Abraham Kuri <kurenn@icalialabs.com>"],
+  "repository": { 
+    "type": "git",
+    "url": "git@github.com:IcaliaLabs/cic-js.git"
+  },
+  "keywords": ["cic", "javascript", "Centro de integracion ciudadana", "Monterrey", "Mexico", "reporte"]
   "dependencies": {
     "jquery": ">= 1.9.0"
   }
