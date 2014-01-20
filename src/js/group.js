@@ -43,19 +43,15 @@ Group = (function(_super) {
       type: 'GET',
       async: options.async,
       success: function(data) {
-        var group_attrs, groups, _i, _len, _results;
+        var group_attrs, groups, _i, _len;
         groups = data.groups;
-        _results = [];
         for (_i = 0, _len = groups.length; _i < _len; _i++) {
           group_attrs = groups[_i];
           response.push(new Group(group_attrs));
-          if (callback) {
-            _results.push(callback(response));
-          } else {
-            _results.push(void 0);
-          }
         }
-        return _results;
+        if (callback) {
+          return callback(response);
+        }
       }
     });
     return response;

@@ -26,7 +26,7 @@ class Group extends ActiveCic
         groups = data.groups
         for group_attrs in groups
           response.push new Group group_attrs
-          callback(response) if callback
+        callback(response) if callback
     )
     response
 
