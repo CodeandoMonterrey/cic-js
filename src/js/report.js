@@ -128,19 +128,15 @@ Report = (function(_super) {
       async: params.async,
       data: params,
       success: function(data) {
-        var report_attributes, reports, _i, _len, _results;
+        var report_attributes, reports, _i, _len;
         reports = data.reports;
-        _results = [];
         for (_i = 0, _len = reports.length; _i < _len; _i++) {
           report_attributes = reports[_i];
           response.push(new Report(report_attributes));
-          if (callback) {
-            _results.push(callback(response));
-          } else {
-            _results.push(void 0);
-          }
         }
-        return _results;
+        if (callback) {
+          return callback(response);
+        }
       }
     });
     return response;

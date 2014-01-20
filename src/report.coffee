@@ -85,7 +85,7 @@ class Report extends ActiveCic
         reports = data.reports
         for report_attributes in reports
           response.push new Report report_attributes
-          callback(response) if callback
+        callback(response) if callback
     )
     response
 
