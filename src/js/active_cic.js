@@ -13,7 +13,8 @@ ActiveCic = (function() {
     this.url = "" + BASE_URL + "/" + end_point + ".json";
     $.ajaxSetup({
       url: this.url,
-      dataType: 'json'
+      dataType: 'json',
+      crossDomain: true
     });
   }
 

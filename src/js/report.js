@@ -65,6 +65,7 @@ Report = (function(_super) {
     return $.ajax({
       type: 'POST',
       data: this._serializedAttributes(),
+      crossDomain: true,
       success: function(data) {
         _this._setGetters(data.reports);
         _this.didSave = true;
