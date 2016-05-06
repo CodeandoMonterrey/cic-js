@@ -1,3 +1,6 @@
+[![Code Climate](https://codeclimate.com/repos/52dd5a4b6956801fd4013c0c/badges/e938cebcbd328a804962/gpa.svg)](https://codeclimate.com/repos/52dd5a4b6956801fd4013c0c/feed)
+[![Test Coverage](https://codeclimate.com/repos/52dd5a4b6956801fd4013c0c/badges/e938cebcbd328a804962/coverage.svg)](https://codeclimate.com/repos/52dd5a4b6956801fd4013c0c/coverage)
+
 #Cic JS library v1.1.0
 
 cic-js is a client wrapper which communicates with the [CIC API](http://developers.cic.mx/api/), and interact with it.
